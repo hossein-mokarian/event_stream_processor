@@ -1,0 +1,1 @@
+build/\nsim_build/\n*.jou\n*.log\n*.str\n*.xpr\n*.cache/\nxsim.dir/\nmodelsim.ini\n*.vcd\n*.wlf\n
