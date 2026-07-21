@@ -1,0 +1,5 @@
+Vivado Simulator 2019.1
+Time resolution is 1 ps
+=== Blinker Testbench ===
+Simulation finished.
+$finish called at time : 100 ns : File "D:/myWorkspace/MOKArian/github/event_stream_processor/tb/unit/tb_blinker.sv" Line 35

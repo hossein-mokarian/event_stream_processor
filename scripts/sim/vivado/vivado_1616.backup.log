@@ -1,0 +1,59 @@
+#-----------------------------------------------------------
+# Vivado v2019.1 (64-bit)
+# SW Build 2552052 on Fri May 24 14:49:42 MDT 2019
+# IP Build 2548770 on Fri May 24 18:01:18 MDT 2019
+# Start of session at: Tue Jul 21 09:09:32 2026
+# Process ID: 1616
+# Current directory: D:/myWorkspace/MOKArian/github/event_stream_processor/scripts/sim/vivado
+# Command line: vivado.exe -mode batch -source sim.tcl
+# Log file: D:/myWorkspace/MOKArian/github/event_stream_processor/scripts/sim/vivado/vivado.log
+# Journal file: D:/myWorkspace/MOKArian/github/event_stream_processor/scripts/sim/vivado\vivado.jou
+#-----------------------------------------------------------
+source sim.tcl
+# open_project blinker_test/blinker_test.xpr
+INFO: [ProjectBase 1-489] The host OS only allows 260 characters in a normal path. The project is stored in a path with more than 80 characters. If you experience issues with IP, Block Designs, or files not being found, please consider moving the project to a location with a shorter path. Alternately consider using the OS subst command to map part of the path to a drive letter.
+Current project path is 'D:/myWorkspace/MOKArian/github/event_stream_processor/scripts/sim/vivado/blinker_test'
+Scanning sources...
+Finished scanning sources
+# launch_simulation
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'D:/myWorkspace/MOKArian/github/event_stream_processor/scripts/sim/vivado/blinker_test/blinker_test.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-54] Inspecting design source files for 'tb_blinker' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'D:/myWorkspace/MOKArian/github/event_stream_processor/scripts/sim/vivado/blinker_test/blinker_test.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -prj tb_blinker_vlog.prj"
+INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'D:/myWorkspace/MOKArian/github/event_stream_processor/scripts/sim/vivado/blinker_test/blinker_test.sim/sim_1/behav/xsim'
+"xelab -wto 8b4df028f38a451296a208d165225cf7 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot tb_blinker_behav xil_defaultlib.tb_blinker xil_defaultlib.glbl -log elaborate.log"
+Vivado Simulator 2019.1
+Copyright 1986-1999, 2001-2019 Xilinx, Inc. All Rights Reserved.
+Running: D:/ProgramFiles/Xilinx/Vivado/2019.1/bin/unwrapped/win64.o/xelab.exe -wto 8b4df028f38a451296a208d165225cf7 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot tb_blinker_behav xil_defaultlib.tb_blinker xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Completed static elaboration
+INFO: [XSIM 43-4323] No Change in HDL. Linking previously generated obj files to create kernel
+INFO: [USF-XSim-69] 'elaborate' step finished in '1' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'D:/myWorkspace/MOKArian/github/event_stream_processor/scripts/sim/vivado/blinker_test/blinker_test.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "tb_blinker_behav -key {Behavioral:sim_1:Functional:tb_blinker} -tclbatch {tb_blinker.tcl} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Vivado Simulator 2019.1
+Time resolution is 1 ps
+source tb_blinker.tcl
+## current_wave_config
+=== Blinker Testbench ===
+Simulation finished.
+$finish called at time : 100 ns : File "D:/myWorkspace/MOKArian/github/event_stream_processor/tb/unit/tb_blinker.sv" Line 35
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'tb_blinker_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+launch_simulation: Time (s): cpu = 00:00:00 ; elapsed = 00:00:06 . Memory (MB): peak = 389.879 ; gain = 9.668
+# run 500ms
+INFO: [Common 17-41] Interrupt caught. Command should exit soon.
+run: Time (s): cpu = 00:00:35 ; elapsed = 00:06:06 . Memory (MB): peak = 389.879 ; gain = 0.000
+INFO: [Common 17-344] 'run' was cancelled
+INFO: [Common 17-344] 'source' was cancelled
+INFO: [Common 17-206] Exiting Vivado at Tue Jul 21 09:15:47 2026...
