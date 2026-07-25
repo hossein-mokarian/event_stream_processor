@@ -1,0 +1,7 @@
+0.6
+2019.1
+May 24 2019
+15:06:07
+D:/myWorkspace/MOKArian/github/event_stream_processor/rtl/uart/uart_tx.sv,1784954632,systemVerilog,,D:/myWorkspace/MOKArian/github/event_stream_processor/tb/unit/tb_uart_tx.sv,,uart_tx,,,,,,,,
+D:/myWorkspace/MOKArian/github/event_stream_processor/scripts/sim/uart_tx_test/uart_tx_test/uart_tx_test.sim/sim_1/behav/xsim/glbl.v,1558713910,verilog,,,,glbl,,,,,,,,
+D:/myWorkspace/MOKArian/github/event_stream_processor/tb/unit/tb_uart_tx.sv,1784961876,systemVerilog,,,,tb_uart_tx,,,,,,,,
