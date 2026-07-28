@@ -1,0 +1,3 @@
+open_project ./timestamp_counter_test/timestamp_counter_test.xpr
+launch_simulation
+run 10us
