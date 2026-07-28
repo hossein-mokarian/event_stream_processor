@@ -1,0 +1,11 @@
+Vivado Simulator 2019.1
+Time resolution is 1 ps
+==== Async FIFO Test ===
+FIFO Depth:          16, Data Width:          32
+Write Clock  Freq:         100 MHz, Read Clock Freq:          50 MHz
+
+  TEST 1: basic write/read operation
+
+=== Test summary ===
+ALL TESTS PASSED!
+$finish called at time : 760 ns : File "D:/myWorkspace/MOKArian/github/event_stream_processor/tb/unit/tb_async_fifo.sv" Line 132
