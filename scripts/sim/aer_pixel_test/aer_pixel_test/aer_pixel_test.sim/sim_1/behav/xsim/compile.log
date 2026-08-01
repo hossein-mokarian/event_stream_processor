@@ -1,0 +1,4 @@
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "D:/myWorkspace/MOKArian/github/event_stream_processor/rtl/event_generator/aer_pixel.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module aer_pixel
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "D:/myWorkspace/MOKArian/github/event_stream_processor/tb/unit/tb_aer_pixel.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module tb_aer_pixel
