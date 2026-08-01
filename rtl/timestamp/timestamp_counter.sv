@@ -1,6 +1,3 @@
-`timescale 1ns/1ps
-
-
 module timestamp_counter #(
     parameter INPUT_CLK_FREQ_HZ = 50_000_000
 ) (

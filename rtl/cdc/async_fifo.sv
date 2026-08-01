@@ -1,6 +1,3 @@
-`timescale 1ns/1ps
-
-
 module async_fifo #(
     parameter DATA_WIDTH = 32,
     parameter ADDR_WIDTH = 4
