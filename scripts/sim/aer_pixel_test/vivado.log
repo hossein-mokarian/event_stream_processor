@@ -2,8 +2,8 @@
 # Vivado v2019.1 (64-bit)
 # SW Build 2552052 on Fri May 24 14:49:42 MDT 2019
 # IP Build 2548770 on Fri May 24 18:01:18 MDT 2019
-# Start of session at: Thu Jul 30 10:01:24 2026
-# Process ID: 19960
+# Start of session at: Thu Aug  6 07:22:37 2026
+# Process ID: 18252
 # Current directory: D:/myWorkspace/MOKArian/github/event_stream_processor/scripts/sim/aer_pixel_test
 # Command line: vivado.exe -mode batch -source sim_aer_pixel.tcl
 # Log file: D:/myWorkspace/MOKArian/github/event_stream_processor/scripts/sim/aer_pixel_test/vivado.log
@@ -28,7 +28,7 @@ INFO: [VRFC 10-2263] Analyzing SystemVerilog file "D:/myWorkspace/MOKArian/githu
 INFO: [VRFC 10-311] analyzing module aer_pixel
 INFO: [VRFC 10-2263] Analyzing SystemVerilog file "D:/myWorkspace/MOKArian/github/event_stream_processor/tb/unit/tb_aer_pixel.sv" into library xil_defaultlib
 INFO: [VRFC 10-311] analyzing module tb_aer_pixel
-INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
+INFO: [USF-XSim-69] 'compile' step finished in '2' seconds
 INFO: [USF-XSim-3] XSim::Elaborate design
 INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'D:/myWorkspace/MOKArian/github/event_stream_processor/scripts/sim/aer_pixel_test/aer_pixel_test/aer_pixel_test.sim/sim_1/behav/xsim'
 "xelab -wto ea1b257649ea4c3fa7e10a84dd3c281f --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot tb_aer_pixel_behav xil_defaultlib.tb_aer_pixel xil_defaultlib.glbl -log elaborate.log"
@@ -46,7 +46,7 @@ Compiling module xil_defaultlib.aer_pixel(PIXEL_X=1,PIXEL_Y=2)
 Compiling module xil_defaultlib.tb_aer_pixel
 Compiling module xil_defaultlib.glbl
 Built simulation snapshot tb_aer_pixel_behav
-INFO: [USF-XSim-69] 'elaborate' step finished in '2' seconds
+INFO: [USF-XSim-69] 'elaborate' step finished in '4' seconds
 INFO: [USF-XSim-4] XSim::Simulate design
 INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'D:/myWorkspace/MOKArian/github/event_stream_processor/scripts/sim/aer_pixel_test/aer_pixel_test/aer_pixel_test.sim/sim_1/behav/xsim'
 INFO: [USF-XSim-98] *** Running xsim
@@ -59,6 +59,6 @@ source tb_aer_pixel.tcl
 $finish called at time : 180 ns : File "D:/myWorkspace/MOKArian/github/event_stream_processor/tb/unit/tb_aer_pixel.sv" Line 65
 INFO: [USF-XSim-96] XSim completed. Design snapshot 'tb_aer_pixel_behav' loaded.
 INFO: [USF-XSim-97] XSim simulation ran for 1000ns
-launch_simulation: Time (s): cpu = 00:00:00 ; elapsed = 00:00:06 . Memory (MB): peak = 391.496 ; gain = 10.883
+launch_simulation: Time (s): cpu = 00:00:00 ; elapsed = 00:00:09 . Memory (MB): peak = 389.297 ; gain = 8.953
 # run 2us
-INFO: [Common 17-206] Exiting Vivado at Thu Jul 30 10:01:34 2026...
+INFO: [Common 17-206] Exiting Vivado at Thu Aug  6 07:23:00 2026...

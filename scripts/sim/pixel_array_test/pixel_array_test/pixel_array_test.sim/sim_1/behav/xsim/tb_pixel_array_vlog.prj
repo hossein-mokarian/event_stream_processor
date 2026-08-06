@@ -1,0 +1,13 @@
+# compile verilog/system verilog design source files
+sv xil_defaultlib  \
+"../../../../../../../../rtl/event_generator/aer_arbiter.sv" \
+"../../../../../../../../rtl/event_generator/aer_pixel.sv" \
+"../../../../../../../../rtl/event_generator/aer_pixel_array.sv" \
+"../../../../../../../../rtl/event_generator/rr_arbiter.sv" \
+"../../../../../../../../tb/unit/tb_pixel_array.sv" \
+
+# compile glbl module
+verilog xil_defaultlib "glbl.v"
+
+# Do not sort compile order
+nosort

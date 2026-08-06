@@ -1,6 +1,6 @@
 webtalk_init -webtalk_dir D:/myWorkspace/MOKArian/github/event_stream_processor/scripts/sim/aer_pixel_test/aer_pixel_test/aer_pixel_test.sim/sim_1/behav/xsim/xsim.dir/tb_aer_pixel_behav/webtalk/
 webtalk_register_client -client project
-webtalk_add_data -client project -key date_generated -value "Thu Jul 30 10:01:33 2026" -context "software_version_and_target_device"
+webtalk_add_data -client project -key date_generated -value "Thu Aug  6 07:23:00 2026" -context "software_version_and_target_device"
 webtalk_add_data -client project -key product_version -value "XSIM v2019.1 (64-bit)" -context "software_version_and_target_device"
 webtalk_add_data -client project -key build_version -value "2552052" -context "software_version_and_target_device"
 webtalk_add_data -client project -key os_platform -value "WIN64" -context "software_version_and_target_device"
@@ -14,7 +14,7 @@ webtalk_add_data -client project -key target_package -value "not_applicable" -co
 webtalk_add_data -client project -key target_speed -value "not_applicable" -context "software_version_and_target_device"
 webtalk_add_data -client project -key random_id -value "6eec6e06-9044-4e5d-912e-ce6b6dad496d" -context "software_version_and_target_device"
 webtalk_add_data -client project -key project_id -value "ea1b257649ea4c3fa7e10a84dd3c281f" -context "software_version_and_target_device"
-webtalk_add_data -client project -key project_iteration -value "12" -context "software_version_and_target_device"
+webtalk_add_data -client project -key project_iteration -value "18" -context "software_version_and_target_device"
 webtalk_add_data -client project -key os_name -value "Windows Server 2016 or Windows 10" -context "user_environment"
 webtalk_add_data -client project -key os_release -value "major release  (build 9200)" -context "user_environment"
 webtalk_add_data -client project -key cpu_name -value "AMD Ryzen 7 7445HS w/ Radeon 740M Graphics     " -context "user_environment"
@@ -26,7 +26,7 @@ webtalk_add_data -client xsim -key Command -value "xsim" -context "xsim\\command
 webtalk_add_data -client xsim -key trace_waveform -value "true" -context "xsim\\usage"
 webtalk_add_data -client xsim -key runtime -value "2180 ns" -context "xsim\\usage"
 webtalk_add_data -client xsim -key iteration -value "1" -context "xsim\\usage"
-webtalk_add_data -client xsim -key Simulation_Time -value "0.05_sec" -context "xsim\\usage"
-webtalk_add_data -client xsim -key Simulation_Memory -value "9200_KB" -context "xsim\\usage"
-webtalk_transmit -clientid 1089766232 -regid "" -xml D:/myWorkspace/MOKArian/github/event_stream_processor/scripts/sim/aer_pixel_test/aer_pixel_test/aer_pixel_test.sim/sim_1/behav/xsim/xsim.dir/tb_aer_pixel_behav/webtalk/usage_statistics_ext_xsim.xml -html D:/myWorkspace/MOKArian/github/event_stream_processor/scripts/sim/aer_pixel_test/aer_pixel_test/aer_pixel_test.sim/sim_1/behav/xsim/xsim.dir/tb_aer_pixel_behav/webtalk/usage_statistics_ext_xsim.html -wdm D:/myWorkspace/MOKArian/github/event_stream_processor/scripts/sim/aer_pixel_test/aer_pixel_test/aer_pixel_test.sim/sim_1/behav/xsim/xsim.dir/tb_aer_pixel_behav/webtalk/usage_statistics_ext_xsim.wdm -intro "<H3>XSIM Usage Report</H3><BR>"
+webtalk_add_data -client xsim -key Simulation_Time -value "0.03_sec" -context "xsim\\usage"
+webtalk_add_data -client xsim -key Simulation_Memory -value "9640_KB" -context "xsim\\usage"
+webtalk_transmit -clientid 1410340260 -regid "" -xml D:/myWorkspace/MOKArian/github/event_stream_processor/scripts/sim/aer_pixel_test/aer_pixel_test/aer_pixel_test.sim/sim_1/behav/xsim/xsim.dir/tb_aer_pixel_behav/webtalk/usage_statistics_ext_xsim.xml -html D:/myWorkspace/MOKArian/github/event_stream_processor/scripts/sim/aer_pixel_test/aer_pixel_test/aer_pixel_test.sim/sim_1/behav/xsim/xsim.dir/tb_aer_pixel_behav/webtalk/usage_statistics_ext_xsim.html -wdm D:/myWorkspace/MOKArian/github/event_stream_processor/scripts/sim/aer_pixel_test/aer_pixel_test/aer_pixel_test.sim/sim_1/behav/xsim/xsim.dir/tb_aer_pixel_behav/webtalk/usage_statistics_ext_xsim.wdm -intro "<H3>XSIM Usage Report</H3><BR>"
 webtalk_terminate

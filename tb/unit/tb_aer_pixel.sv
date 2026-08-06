@@ -12,11 +12,11 @@ module tb_aer_pixel;
 
     logic clk;
     logic rst_n;
-    logic stimulus;
-    logic req;
-    logic [ADDR_WIDTH - 1 : 0] pixel_addr;
-    logic pol;
-    logic ack;
+    logic stimulus_in;
+    logic req_out;
+    logic [ADDR_WIDTH - 1 : 0] pixel_addr_out;
+    logic pol_out;
+    logic ack_in;
 
     aer_pixel #(
         .PIXEL_X(PIXEL_X),
@@ -25,11 +25,11 @@ module tb_aer_pixel;
     ) dut (
         .clk(clk),
         .rst_n(rst_n),
-        .stimulus(stimulus),
-        .req(req),
-        .pixel_addr(pixel_addr),
-        .pol(pol),
-        .ack(ack)
+        .stimulus_in(stimulus_in),
+        .req_out(req_out),
+        .pixel_addr_out(pixel_addr_out),
+        .pol_out(pol_out),
+        .ack_in(ack_in)
     );
 
     //--- CLK generation ---
@@ -40,8 +40,8 @@ module tb_aer_pixel;
     initial begin
         
         //--- Initial Values ---
-        stimulus = 1'b0;
-        ack = 1'b0;
+        stimulus_in = 1'b0;
+        ack_in = 1'b0;
         
         //--- Reset ---
         rst_n = 0;
@@ -51,14 +51,14 @@ module tb_aer_pixel;
 
         //--- Test 1 ---
         repeat(10) @(negedge clk);
-        stimulus = 1'b1;
+        stimulus_in = 1'b1;
         @(negedge clk);
-        stimulus = 1'b0;
+        stimulus_in = 1'b0;
 
         repeat(5) @(negedge clk);
-        ack = 1'b1;
+        ack_in = 1'b1;
         repeat(5) @(negedge clk);
-        ack = 1'b0;
+        ack_in = 1'b0;
 
         #100
 
@@ -69,15 +69,15 @@ module tb_aer_pixel;
     //--- SVA ---
     property stimulus_req_p;
         @(posedge clk) disable iff (!rst_n)
-        stimulus |=> req;
+        stimulus_in |=> req_out;
     endproperty
 
     assert property (stimulus_req_p) 
-        else $error("REQ is not asserted after asserting stimulus!");
+        else $error("REQ is not asserted after asserting stimulus_in!");
 
     property low_ack_req_p;
         @(posedge clk) disable iff (!rst_n)
-        req |-> ack |=> !ack |=> !req;
+        req_out |-> ack_in |=> !ack_in |=> !req_out;
     endproperty
 
     assert property (low_ack_req_p)
@@ -85,15 +85,15 @@ module tb_aer_pixel;
 
     property check_req_state_p;
         @(posedge clk) disable iff (!rst_n)
-        stimulus |=> dut.state == dut.REQUEST;
+        stimulus_in |=> dut.state == dut.REQUEST;
     endproperty
 
     assert property (check_req_state_p)
-        else $error("No transition to REQ state after high stimulus!");
+        else $error("No transition to REQ state after high stimulus_in!");
     
     property wait_for_low_ack_p;
         @(posedge clk) disable iff (!rst_n)
-        (ack && dut.state == dut.WAIT_FOR_LOW_ACK) |=> $stable(dut.state);
+        (ack_in && dut.state == dut.WAIT_FOR_LOW_ACK) |=> $stable(dut.state);
     endproperty
 
     assert property (wait_for_low_ack_p)
@@ -101,7 +101,7 @@ module tb_aer_pixel;
     
     property return_to_idle_p;
         @(posedge clk) disable iff (!rst_n)
-        (!ack && req) ##1 (!ack && !req) |=> dut.state == dut.IDLE;
+        (!ack_in && req_out) ##1 (!ack_in && !req_out) |=> dut.state == dut.IDLE;
     endproperty
 
     assert property (return_to_idle_p)

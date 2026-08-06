@@ -6,12 +6,12 @@ module aer_pixel #(
     input logic clk,
     input logic rst_n,
 
-    input logic stimulus,
+    input logic stimulus_in,
 
-    output logic req,
-    output logic [ADDR_WIDTH - 1 : 0] pixel_addr,
-    output logic pol,
-    input logic ack
+    output logic req_out,
+    output logic [ADDR_WIDTH - 1 : 0] pixel_addr_out,
+    output logic pol_out,
+    input logic ack_in
 );
 
     typedef enum logic [1 : 0] { 
@@ -36,10 +36,10 @@ module aer_pixel #(
             last_stimulus <= 1'b0;
             stimulus_posedge <= 1'b0;
             stimulus_negedge <= 1'b0;
-        end else if (state == IDLE && stimulus) begin
-            last_stimulus <= stimulus;
-            stimulus_posedge <= (!last_stimulus && stimulus);
-            stimulus_negedge <= (last_stimulus && !stimulus);
+        end else if (state == IDLE && stimulus_in) begin
+            last_stimulus <= stimulus_in;
+            stimulus_posedge <= (!last_stimulus && stimulus_in);
+            stimulus_negedge <= (last_stimulus && !stimulus_in);
         end
     end
 
@@ -49,30 +49,29 @@ module aer_pixel #(
             state <= IDLE;
         end else begin
             case (state)
-                IDLE: if (stimulus) state <= REQUEST;
-                REQUEST: if (ack) state <= WAIT_FOR_LOW_ACK;
-                WAIT_FOR_LOW_ACK: if (!ack) state <= IDLE;
+                IDLE: if (stimulus_in) state <= REQUEST;
+                REQUEST: if (ack_in) state <= WAIT_FOR_LOW_ACK;
+                WAIT_FOR_LOW_ACK: if (!ack_in) state <= IDLE;
                 default: state <= IDLE;
             endcase
         end
     end
 
 
-    always_ff @(posedge clk or negedge rst_n) begin
+    always_comb begin
         if (!rst_n) begin
             event_pol <= 1'b0;
-        end else if (state == IDLE) begin
-            if (stimulus_posedge)
-                event_pol <= 1'b1;
-            else if (stimulus_negedge)
-                event_pol <= 1'b0;
+        end else if(stimulus_posedge)  begin
+            event_pol <= 1'b1;
+        end else if (stimulus_negedge) begin
+            event_pol <= 1'b0;
         end
     end
 
 
-    assign req = (state == REQUEST);
-    assign pixel_addr = {PIXEL_X[7 : 0], PIXEL_Y[7 : 0]};
-    assign pol = event_pol;
+    assign req_out = (state == REQUEST) ? 1'b1 : 1'b0;
+    assign pixel_addr_out = {PIXEL_X[7 : 0], PIXEL_Y[7 : 0]};
+    assign pol_out = event_pol;
 
 
 endmodule

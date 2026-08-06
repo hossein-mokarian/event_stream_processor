@@ -2,8 +2,8 @@
 # Vivado v2019.1 (64-bit)
 # SW Build 2552052 on Fri May 24 14:49:42 MDT 2019
 # IP Build 2548770 on Fri May 24 18:01:18 MDT 2019
-# Start of session at: Thu Jul 30 09:43:25 2026
-# Process ID: 18436
+# Start of session at: Thu Jul 30 10:01:24 2026
+# Process ID: 19960
 # Current directory: D:/myWorkspace/MOKArian/github/event_stream_processor/scripts/sim/aer_pixel_test
 # Command line: vivado.exe -mode batch -source sim_aer_pixel.tcl
 # Log file: D:/myWorkspace/MOKArian/github/event_stream_processor/scripts/sim/aer_pixel_test/vivado.log
@@ -56,13 +56,9 @@ Vivado Simulator 2019.1
 Time resolution is 1 ps
 source tb_aer_pixel.tcl
 ## current_wave_config
-Error: REQ is not asserted after asserting stimulus!
-Time: 61 ns  Iteration: 2  Process: /tb_aer_pixel//tb_aer_pixel  File: D:/myWorkspace/MOKArian/github/event_stream_processor/tb/unit/tb_aer_pixel.sv
-Error: No transition to REQ state after high stimulus!
-Time: 61 ns  Iteration: 2  Process: /tb_aer_pixel//tb_aer_pixel  File: D:/myWorkspace/MOKArian/github/event_stream_processor/tb/unit/tb_aer_pixel.sv
-$finish called at time : 160 ns : File "D:/myWorkspace/MOKArian/github/event_stream_processor/tb/unit/tb_aer_pixel.sv" Line 59
+$finish called at time : 180 ns : File "D:/myWorkspace/MOKArian/github/event_stream_processor/tb/unit/tb_aer_pixel.sv" Line 65
 INFO: [USF-XSim-96] XSim completed. Design snapshot 'tb_aer_pixel_behav' loaded.
 INFO: [USF-XSim-97] XSim simulation ran for 1000ns
-launch_simulation: Time (s): cpu = 00:00:00 ; elapsed = 00:00:06 . Memory (MB): peak = 390.477 ; gain = 10.254
+launch_simulation: Time (s): cpu = 00:00:00 ; elapsed = 00:00:06 . Memory (MB): peak = 391.496 ; gain = 10.883
 # run 2us
-INFO: [Common 17-206] Exiting Vivado at Thu Jul 30 09:43:35 2026...
+INFO: [Common 17-206] Exiting Vivado at Thu Jul 30 10:01:34 2026...
