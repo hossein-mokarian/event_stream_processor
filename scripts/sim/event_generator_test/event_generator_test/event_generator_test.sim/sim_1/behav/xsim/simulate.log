@@ -1,0 +1,28 @@
+Vivado Simulator 2019.1
+Time resolution is 1 ps
+====================================================================
+Test 1:   IDLE mode
+GOAL:     It must not genrate any events and no reqs are detected.
+Results:
+      Events     :           0
+      ON events  :           0
+      OFF events :           0
+PASS:     Test 1 (IDLE mode) is done successfully.
+====================================================================
+Test 2:   EDGE mode
+GOAL:     A vertical or horizontal edge is generated and we can see the pixel addresses alongside reqs.
+Results:
+      Events     :          16
+      ON events  :          16
+      OFF events :           0
+WARNING:  No OFF events are generated!
+====================================================================
+Test 3:   HOT mode
+GOAL:     A hot pixel is generated.
+Results:
+      Events     :          16
+      ON events  :          16
+      OFF events :           0
+WARNING:  No OFF events are generated!
+====================================================================
+$finish called at time : 13170 ns : File "D:/myWorkspace/MOKArian/github/event_stream_processor/tb/unit/tb_event_generator.sv" Line 262
