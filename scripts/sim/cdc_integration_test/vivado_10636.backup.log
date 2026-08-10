@@ -1,0 +1,48 @@
+#-----------------------------------------------------------
+# Vivado v2019.1 (64-bit)
+# SW Build 2552052 on Fri May 24 14:49:42 MDT 2019
+# IP Build 2548770 on Fri May 24 18:01:18 MDT 2019
+# Start of session at: Mon Aug 10 10:42:14 2026
+# Process ID: 10636
+# Current directory: D:/myWorkspace/MOKArian/github/event_stream_processor/scripts/sim/cdc_integration_test
+# Command line: vivado.exe -mode batch -source sim_cdc_integration.tcl
+# Log file: D:/myWorkspace/MOKArian/github/event_stream_processor/scripts/sim/cdc_integration_test/vivado.log
+# Journal file: D:/myWorkspace/MOKArian/github/event_stream_processor/scripts/sim/cdc_integration_test\vivado.jou
+#-----------------------------------------------------------
+source sim_cdc_integration.tcl
+# open_project ./cdc_integration_test/cdc_integration_test.xpr
+INFO: [ProjectBase 1-489] The host OS only allows 260 characters in a normal path. The project is stored in a path with more than 80 characters. If you experience issues with IP, Block Designs, or files not being found, please consider moving the project to a location with a shorter path. Alternately consider using the OS subst command to map part of the path to a drive letter.
+Current project path is 'D:/myWorkspace/MOKArian/github/event_stream_processor/scripts/sim/cdc_integration_test/cdc_integration_test'
+Scanning sources...
+Finished scanning sources
+# launch_simulation
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'D:/myWorkspace/MOKArian/github/event_stream_processor/scripts/sim/cdc_integration_test/cdc_integration_test/cdc_integration_test.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-54] Inspecting design source files for 'tb_cdc_integration' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'D:/myWorkspace/MOKArian/github/event_stream_processor/scripts/sim/cdc_integration_test/cdc_integration_test/cdc_integration_test.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -prj tb_cdc_integration_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "D:/myWorkspace/MOKArian/github/event_stream_processor/rtl/event_generator/aer_arbiter.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module aer_arbiter
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "D:/myWorkspace/MOKArian/github/event_stream_processor/rtl/event_generator/aer_pixel.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module aer_pixel
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "D:/myWorkspace/MOKArian/github/event_stream_processor/rtl/event_generator/aer_pixel_array.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module aer_pixel_array
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "D:/myWorkspace/MOKArian/github/event_stream_processor/rtl/cdc/async_fifo.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module async_fifo
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "D:/myWorkspace/MOKArian/github/event_stream_processor/rtl/cdc/event_cdc_bridge.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module event_cd_bridge
+ERROR: [VRFC 10-2989] 'aer_ack_in' is not declared [D:/myWorkspace/MOKArian/github/event_stream_processor/rtl/cdc/event_cdc_bridge.sv:76]
+ERROR: [VRFC 10-2865] module 'event_cd_bridge' ignored due to previous errors [D:/myWorkspace/MOKArian/github/event_stream_processor/rtl/cdc/event_cdc_bridge.sv:1]
+INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
+INFO: [USF-XSim-99] Step results log file:'D:/myWorkspace/MOKArian/github/event_stream_processor/scripts/sim/cdc_integration_test/cdc_integration_test/cdc_integration_test.sim/sim_1/behav/xsim/xvlog.log'
+ERROR: [USF-XSim-62] 'compile' step failed with error(s). Please check the Tcl console output or 'D:/myWorkspace/MOKArian/github/event_stream_processor/scripts/sim/cdc_integration_test/cdc_integration_test/cdc_integration_test.sim/sim_1/behav/xsim/xvlog.log' file for more information.
+ERROR: [Vivado 12-4473] Detected error while running simulation. Please correct the issue and retry this operation.
+ERROR: [Common 17-39] 'launch_simulation' failed due to earlier errors.
+
+    while executing
+"launch_simulation"
+    (file "sim_cdc_integration.tcl" line 2)
+INFO: [Common 17-206] Exiting Vivado at Mon Aug 10 10:42:20 2026...
