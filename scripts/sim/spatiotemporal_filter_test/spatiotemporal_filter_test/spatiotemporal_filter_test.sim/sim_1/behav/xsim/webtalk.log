@@ -1,0 +1,13 @@
+#-----------------------------------------------------------
+# Webtalk v2019.1 (64-bit)
+# SW Build 2552052 on Fri May 24 14:49:42 MDT 2019
+# IP Build 2548770 on Fri May 24 18:01:18 MDT 2019
+# Start of session at: Thu Aug 13 09:08:52 2026
+# Process ID: 6084
+# Current directory: D:/myWorkspace/MOKArian/github/event_stream_processor/scripts/sim/spatiotemporal_filter_test/spatiotemporal_filter_test/spatiotemporal_filter_test.sim/sim_1/behav/xsim
+# Command line: wbtcv.exe -mode batch -source D:/myWorkspace/MOKArian/github/event_stream_processor/scripts/sim/spatiotemporal_filter_test/spatiotemporal_filter_test/spatiotemporal_filter_test.sim/sim_1/behav/xsim/xsim.dir/tb_spatiotemporal_filter_behav/webtalk/xsim_webtalk.tcl -notrace
+# Log file: D:/myWorkspace/MOKArian/github/event_stream_processor/scripts/sim/spatiotemporal_filter_test/spatiotemporal_filter_test/spatiotemporal_filter_test.sim/sim_1/behav/xsim/webtalk.log
+# Journal file: D:/myWorkspace/MOKArian/github/event_stream_processor/scripts/sim/spatiotemporal_filter_test/spatiotemporal_filter_test/spatiotemporal_filter_test.sim/sim_1/behav/xsim\webtalk.jou
+#-----------------------------------------------------------
+source D:/myWorkspace/MOKArian/github/event_stream_processor/scripts/sim/spatiotemporal_filter_test/spatiotemporal_filter_test/spatiotemporal_filter_test.sim/sim_1/behav/xsim/xsim.dir/tb_spatiotemporal_filter_behav/webtalk/xsim_webtalk.tcl -notrace
+INFO: [Common 17-206] Exiting Webtalk at Thu Aug 13 09:08:54 2026...

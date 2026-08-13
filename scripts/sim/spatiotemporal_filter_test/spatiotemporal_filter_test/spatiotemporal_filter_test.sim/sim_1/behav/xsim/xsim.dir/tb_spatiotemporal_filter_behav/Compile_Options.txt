@@ -1,0 +1,1 @@
+-wto "a3dee2c672be42d1a3495417f3defb59" --incr --debug "typical" --relax --mt "2" -L "xil_defaultlib" -L "unisims_ver" -L "unimacro_ver" -L "secureip" --snapshot "tb_spatiotemporal_filter_behav" "xil_defaultlib.tb_spatiotemporal_filter" "xil_defaultlib.glbl" -log "elaborate.log" 

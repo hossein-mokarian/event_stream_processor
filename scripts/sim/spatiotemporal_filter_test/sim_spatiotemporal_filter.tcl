@@ -1,0 +1,3 @@
+open_project ./spatiotemporal_filter_test/spatiotemporal_filter_test.xpr
+launch_simulation
+run 10us

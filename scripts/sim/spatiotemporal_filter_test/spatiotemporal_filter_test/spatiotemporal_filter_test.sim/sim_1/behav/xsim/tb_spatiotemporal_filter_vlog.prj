@@ -1,0 +1,10 @@
+# compile verilog/system verilog design source files
+sv xil_defaultlib  \
+"../../../../../../../../rtl/filter/spatiotemporal_filter.sv" \
+"../../../../../../../../tb/unit/tb_spatiotemporal_filter.sv" \
+
+# compile glbl module
+verilog xil_defaultlib "glbl.v"
+
+# Do not sort compile order
+nosort

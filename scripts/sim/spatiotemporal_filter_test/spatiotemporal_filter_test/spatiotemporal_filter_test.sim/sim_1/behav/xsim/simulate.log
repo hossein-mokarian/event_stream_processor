@@ -1,0 +1,19 @@
+Vivado Simulator 2019.1
+Time resolution is 1 ps
+====================================================================
+Test 1:   single events
+GOAL:     
+Results:
+PASS:     Test 1 is done successfully.
+====================================================================
+Test 2:   Burst events 
+GOAL:     
+Results:
+PASS:     Test 2 is done successfully.
+====================================================================
+Test 3:   Timestamp > 50us 
+GOAL:     
+Results:
+PASS:     Test 3 is done successfully.
+====================================================================
+$finish called at time : 2190 ns : File "D:/myWorkspace/MOKArian/github/event_stream_processor/tb/unit/tb_spatiotemporal_filter.sv" Line 229

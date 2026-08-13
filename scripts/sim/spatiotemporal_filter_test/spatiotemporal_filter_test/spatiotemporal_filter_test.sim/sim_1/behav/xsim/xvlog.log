@@ -1,0 +1,4 @@
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "D:/myWorkspace/MOKArian/github/event_stream_processor/rtl/filter/spatiotemporal_filter.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module spatiotemporal_filter
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "D:/myWorkspace/MOKArian/github/event_stream_processor/tb/unit/tb_spatiotemporal_filter.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module tb_spatiotemporal_filter

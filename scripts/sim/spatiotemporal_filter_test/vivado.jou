@@ -1,0 +1,13 @@
+#-----------------------------------------------------------
+# Vivado v2019.1 (64-bit)
+# SW Build 2552052 on Fri May 24 14:49:42 MDT 2019
+# IP Build 2548770 on Fri May 24 18:01:18 MDT 2019
+# Start of session at: Thu Aug 13 10:57:05 2026
+# Process ID: 2384
+# Current directory: D:/myWorkspace/MOKArian/github/event_stream_processor/scripts/sim/spatiotemporal_filter_test
+# Command line: vivado.exe -mode batch -source sim_spatiotemporal_filter.tcl
+# Log file: D:/myWorkspace/MOKArian/github/event_stream_processor/scripts/sim/spatiotemporal_filter_test/vivado.log
+# Journal file: D:/myWorkspace/MOKArian/github/event_stream_processor/scripts/sim/spatiotemporal_filter_test\vivado.jou
+#-----------------------------------------------------------
+source sim_spatiotemporal_filter.tcl
+source tb_spatiotemporal_filter.tcl
