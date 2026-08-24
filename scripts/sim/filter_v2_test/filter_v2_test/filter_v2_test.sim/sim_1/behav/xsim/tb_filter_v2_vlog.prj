@@ -1,0 +1,13 @@
+# compile verilog/system verilog design source files
+sv xil_defaultlib  \
+"../../../../../../../../rtl/filter/filter_subsystem.sv" \
+"../../../../../../../../rtl/filter/filter_v2.sv" \
+"../../../../../../../../rtl/filter/history_buffer.sv" \
+"../../../../../../../../rtl/timestamp/timestamp_counter.sv" \
+"../../../../../../../../tb/unit/tb_filter_v2.sv" \
+
+# compile glbl module
+verilog xil_defaultlib "glbl.v"
+
+# Do not sort compile order
+nosort

@@ -1,0 +1,20 @@
+Vivado Simulator 2019.1
+Copyright 1986-1999, 2001-2019 Xilinx, Inc. All Rights Reserved.
+Running: D:/ProgramFiles/Xilinx/Vivado/2019.1/bin/unwrapped/win64.o/xelab.exe -wto 3661c3a2d5a34463b7333f3731f13ce0 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot tb_filter_v2_behav xil_defaultlib.tb_filter_v2 xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Completed static elaboration
+Starting simulation data flow analysis
+WARNING: [XSIM 43-4099] "D:/myWorkspace/MOKArian/github/event_stream_processor/rtl/filter/filter_subsystem.sv" Line 1. Module filter_subsystem(HISTORY_DEPTH=64) doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "D:/myWorkspace/MOKArian/github/event_stream_processor/rtl/timestamp/timestamp_counter.sv" Line 1. Module timestamp_counter_default doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "D:/myWorkspace/MOKArian/github/event_stream_processor/rtl/filter/filter_v2.sv" Line 1. Module filter_v2(HISTORY_DEPTH=64) doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "D:/myWorkspace/MOKArian/github/event_stream_processor/rtl/filter/history_buffer.sv" Line 1. Module history_buffer doesn't have a timescale but at least one module in design has a timescale.
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.timestamp_counter_default
+Compiling module xil_defaultlib.history_buffer
+Compiling module xil_defaultlib.filter_v2(HISTORY_DEPTH=64)
+Compiling module xil_defaultlib.filter_subsystem(HISTORY_DEPTH=6...
+Compiling module xil_defaultlib.tb_filter_v2
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot tb_filter_v2_behav
