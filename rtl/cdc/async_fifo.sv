@@ -114,7 +114,7 @@ module async_fifo #(
     end
 
     //--- Empty Flag ---
-    assign rempty_out = (!rrst_n) ? 1'b0 : (rptr_grey == wptr_grey_r2);
+    assign rempty_out = (!rrst_n) ? 1'b1 : (rptr_grey == wptr_grey_r2);
 
     //--- Helper function(s) ---
     function automatic logic [PTR_WIDTH - 1 : 0] bin_2_grey(

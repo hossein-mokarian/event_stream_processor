@@ -16,6 +16,7 @@ module spatiotemporal_filter #(
     input logic [ADDR_WIDTH - 1 : 0] ev_addr_in, // {x, y}
     input logic ev_pol_in,
     input logic [TIMESTAMP_WIDTH - 1 : 0] timestamp_in,
+    output logic ev_ack_out,
 
     //--- Filtered events ---
     output logic ev_valid_out,
@@ -85,7 +86,7 @@ module spatiotemporal_filter #(
                 ev_ts   [i] <= {TIMESTAMP_WIDTH{1'b0}};
             end
         end else begin
-            ev_valid[0] <= ev_valid_in;
+            ev_valid[0] <= ev_valid_in && ev_ack_out;
             
             if (ev_valid_in) begin
                 ev_addr[0] <= ev_addr_in;
@@ -99,6 +100,17 @@ module spatiotemporal_filter #(
                 ev_pol  [i + 1] <= ev_pol  [i];
                 ev_ts   [i + 1] <= ev_ts   [i];
             end
+        end
+    end
+
+
+    always_ff @(posedge clk or negedge rst_n) begin
+        if (!rst_n) begin
+            ev_ack_out <= 1'b0;
+        end else if (ev_valid_in) begin
+            ev_ack_out <= 1'b1;
+        end else begin
+            ev_ack_out <= 1'b0;
         end
     end
 
@@ -176,7 +188,7 @@ module spatiotemporal_filter #(
             wptr <= '0;
             history_full <= 1'b0;
         end else if (ev_valid[S3_UPDATE] && event_found) begin
-            if (wptr >= HISTORY_DEPTH) begin
+            if (wptr >= HISTORY_DEPTH - 1) begin
                 wptr <= '0;
                 history_full <= 1'b1;
             end else begin

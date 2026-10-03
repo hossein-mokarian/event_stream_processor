@@ -1,0 +1,455 @@
+#-----------------------------------------------------------
+# Vivado v2019.1 (64-bit)
+# SW Build 2552052 on Fri May 24 14:49:42 MDT 2019
+# IP Build 2548770 on Fri May 24 18:01:18 MDT 2019
+# Start of session at: Sat Oct  3 10:22:49 2026
+# Process ID: 1828
+# Current directory: D:/myWorkspace/MOKArian/github/event_stream_processor/scripts/sim/pipeline_test
+# Command line: vivado.exe -mode batch -source sim_pipeline.tcl
+# Log file: D:/myWorkspace/MOKArian/github/event_stream_processor/scripts/sim/pipeline_test/vivado.log
+# Journal file: D:/myWorkspace/MOKArian/github/event_stream_processor/scripts/sim/pipeline_test\vivado.jou
+#-----------------------------------------------------------
+source sim_pipeline.tcl
+# open_project ./pipeline_test/pipeline_test.xpr
+INFO: [ProjectBase 1-489] The host OS only allows 260 characters in a normal path. The project is stored in a path with more than 80 characters. If you experience issues with IP, Block Designs, or files not being found, please consider moving the project to a location with a shorter path. Alternately consider using the OS subst command to map part of the path to a drive letter.
+Current project path is 'D:/myWorkspace/MOKArian/github/event_stream_processor/scripts/sim/pipeline_test/pipeline_test'
+Scanning sources...
+Finished scanning sources
+# launch_simulation
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'D:/myWorkspace/MOKArian/github/event_stream_processor/scripts/sim/pipeline_test/pipeline_test/pipeline_test.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-54] Inspecting design source files for 'tb_pipeline' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'D:/myWorkspace/MOKArian/github/event_stream_processor/scripts/sim/pipeline_test/pipeline_test/pipeline_test.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -prj tb_pipeline_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "D:/myWorkspace/MOKArian/github/event_stream_processor/rtl/event_generator/aer_arbiter.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module aer_arbiter
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "D:/myWorkspace/MOKArian/github/event_stream_processor/rtl/event_generator/aer_pixel.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module aer_pixel
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "D:/myWorkspace/MOKArian/github/event_stream_processor/rtl/event_generator/aer_pixel_array.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module aer_pixel_array
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "D:/myWorkspace/MOKArian/github/event_stream_processor/rtl/cdc/async_fifo.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module async_fifo
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "D:/myWorkspace/MOKArian/github/event_stream_processor/rtl/cdc/event_cdc_bridge.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module event_cdc_bridge
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "D:/myWorkspace/MOKArian/github/event_stream_processor/rtl/event_generator/event_generator_top.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module event_generator_top
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "D:/myWorkspace/MOKArian/github/event_stream_processor/rtl/top/event_pipeline.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module event_pipeline
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "D:/myWorkspace/MOKArian/github/event_stream_processor/rtl/filter/filter_subsystem.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module filter_subsystem
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "D:/myWorkspace/MOKArian/github/event_stream_processor/rtl/event_generator/rr_arbiter.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module rr_arbiter
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "D:/myWorkspace/MOKArian/github/event_stream_processor/rtl/filter/spatiotemporal_filter.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module spatiotemporal_filter
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "D:/myWorkspace/MOKArian/github/event_stream_processor/rtl/event_generator/stimulus_generator.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module stimulus_generator
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "D:/myWorkspace/MOKArian/github/event_stream_processor/rtl/timestamp/timestamp_counter.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module timestamp_counter
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "D:/myWorkspace/MOKArian/github/event_stream_processor/tb/integration/tb_pipeline.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module tb_pipeline
+WARNING: [VRFC 10-3543] multiple overrides for parameter 'ADDR_WIDTH' [D:/myWorkspace/MOKArian/github/event_stream_processor/tb/integration/tb_pipeline.sv:51]
+INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'D:/myWorkspace/MOKArian/github/event_stream_processor/scripts/sim/pipeline_test/pipeline_test/pipeline_test.sim/sim_1/behav/xsim'
+"xelab -wto 22c8d2b5253940b9a31014dab9320c05 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot tb_pipeline_behav xil_defaultlib.tb_pipeline xil_defaultlib.glbl -log elaborate.log"
+Vivado Simulator 2019.1
+Copyright 1986-1999, 2001-2019 Xilinx, Inc. All Rights Reserved.
+Running: D:/ProgramFiles/Xilinx/Vivado/2019.1/bin/unwrapped/win64.o/xelab.exe -wto 22c8d2b5253940b9a31014dab9320c05 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot tb_pipeline_behav xil_defaultlib.tb_pipeline xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+WARNING: [VRFC 10-3091] actual bit length 31 differs from formal bit length 16 for port 'ev_addr_in' [D:/myWorkspace/MOKArian/github/event_stream_processor/rtl/top/event_pipeline.sv:121]
+Completed static elaboration
+Starting simulation data flow analysis
+WARNING: [XSIM 43-4099] "D:/myWorkspace/MOKArian/github/event_stream_processor/rtl/top/event_pipeline.sv" Line 1. Module event_pipeline(INPUT_CLK_FREQ_HZ=100000000) doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "D:/myWorkspace/MOKArian/github/event_stream_processor/rtl/event_generator/event_generator_top.sv" Line 1. Module event_generator_top doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "D:/myWorkspace/MOKArian/github/event_stream_processor/rtl/event_generator/stimulus_generator.sv" Line 1. Module stimulus_generator_default doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "D:/myWorkspace/MOKArian/github/event_stream_processor/rtl/event_generator/aer_pixel_array.sv" Line 1. Module aer_pixel_array_default doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "D:/myWorkspace/MOKArian/github/event_stream_processor/rtl/event_generator/aer_pixel.sv" Line 1. Module aer_pixel doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "D:/myWorkspace/MOKArian/github/event_stream_processor/rtl/event_generator/aer_pixel.sv" Line 1. Module aer_pixel(PIXEL_Y=1) doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "D:/myWorkspace/MOKArian/github/event_stream_processor/rtl/event_generator/aer_pixel.sv" Line 1. Module aer_pixel(PIXEL_Y=2) doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "D:/myWorkspace/MOKArian/github/event_stream_processor/rtl/event_generator/aer_pixel.sv" Line 1. Module aer_pixel(PIXEL_Y=3) doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "D:/myWorkspace/MOKArian/github/event_stream_processor/rtl/event_generator/aer_pixel.sv" Line 1. Module aer_pixel(PIXEL_Y=4) doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "D:/myWorkspace/MOKArian/github/event_stream_processor/rtl/event_generator/aer_pixel.sv" Line 1. Module aer_pixel(PIXEL_Y=5) doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "D:/myWorkspace/MOKArian/github/event_stream_processor/rtl/event_generator/aer_pixel.sv" Line 1. Module aer_pixel(PIXEL_Y=6) doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "D:/myWorkspace/MOKArian/github/event_stream_processor/rtl/event_generator/aer_pixel.sv" Line 1. Module aer_pixel(PIXEL_Y=7) doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "D:/myWorkspace/MOKArian/github/event_stream_processor/rtl/event_generator/aer_pixel.sv" Line 1. Module aer_pixel(PIXEL_Y=8) doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "D:/myWorkspace/MOKArian/github/event_stream_processor/rtl/event_generator/aer_pixel.sv" Line 1. Module aer_pixel(PIXEL_Y=9) doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "D:/myWorkspace/MOKArian/github/event_stream_processor/rtl/event_generator/aer_pixel.sv" Line 1. Module aer_pixel(PIXEL_Y=10) doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "D:/myWorkspace/MOKArian/github/event_stream_processor/rtl/event_generator/aer_pixel.sv" Line 1. Module aer_pixel(PIXEL_Y=11) doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "D:/myWorkspace/MOKArian/github/event_stream_processor/rtl/event_generator/aer_pixel.sv" Line 1. Module aer_pixel(PIXEL_Y=12) doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "D:/myWorkspace/MOKArian/github/event_stream_processor/rtl/event_generator/aer_pixel.sv" Line 1. Module aer_pixel(PIXEL_Y=13) doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "D:/myWorkspace/MOKArian/github/event_stream_processor/rtl/event_generator/aer_pixel.sv" Line 1. Module aer_pixel(PIXEL_Y=14) doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "D:/myWorkspace/MOKArian/github/event_stream_processor/rtl/event_generator/aer_pixel.sv" Line 1. Module aer_pixel(PIXEL_Y=15) doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "D:/myWorkspace/MOKArian/github/event_stream_processor/rtl/event_generator/aer_pixel.sv" Line 1. Module aer_pixel(PIXEL_X=1) doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "D:/myWorkspace/MOKArian/github/event_stream_processor/rtl/event_generator/aer_pixel.sv" Line 1. Module aer_pixel(PIXEL_X=1,PIXEL_Y=1) doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "D:/myWorkspace/MOKArian/github/event_stream_processor/rtl/event_generator/aer_pixel.sv" Line 1. Module aer_pixel(PIXEL_X=1,PIXEL_Y=2) doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "D:/myWorkspace/MOKArian/github/event_stream_processor/rtl/event_generator/aer_pixel.sv" Line 1. Module aer_pixel(PIXEL_X=1,PIXEL_Y=3) doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "D:/myWorkspace/MOKArian/github/event_stream_processor/rtl/event_generator/aer_pixel.sv" Line 1. Module aer_pixel(PIXEL_X=1,PIXEL_Y=4) doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "D:/myWorkspace/MOKArian/github/event_stream_processor/rtl/event_generator/aer_pixel.sv" Line 1. Module aer_pixel(PIXEL_X=1,PIXEL_Y=5) doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "D:/myWorkspace/MOKArian/github/event_stream_processor/rtl/event_generator/aer_pixel.sv" Line 1. Module aer_pixel(PIXEL_X=1,PIXEL_Y=6) doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "D:/myWorkspace/MOKArian/github/event_stream_processor/rtl/event_generator/aer_pixel.sv" Line 1. Module aer_pixel(PIXEL_X=1,PIXEL_Y=7) doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "D:/myWorkspace/MOKArian/github/event_stream_processor/rtl/event_generator/aer_pixel.sv" Line 1. Module aer_pixel(PIXEL_X=1,PIXEL_Y=8) doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "D:/myWorkspace/MOKArian/github/event_stream_processor/rtl/event_generator/aer_pixel.sv" Line 1. Module aer_pixel(PIXEL_X=1,PIXEL_Y=9) doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "D:/myWorkspace/MOKArian/github/event_stream_processor/rtl/event_generator/aer_pixel.sv" Line 1. Module aer_pixel(PIXEL_X=1,PIXEL_Y=10) doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "D:/myWorkspace/MOKArian/github/event_stream_processor/rtl/event_generator/aer_pixel.sv" Line 1. Module aer_pixel(PIXEL_X=1,PIXEL_Y=11) doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "D:/myWorkspace/MOKArian/github/event_stream_processor/rtl/event_generator/aer_pixel.sv" Line 1. Module aer_pixel(PIXEL_X=1,PIXEL_Y=12) doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "D:/myWorkspace/MOKArian/github/event_stream_processor/rtl/event_generator/aer_pixel.sv" Line 1. Module aer_pixel(PIXEL_X=1,PIXEL_Y=13) doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "D:/myWorkspace/MOKArian/github/event_stream_processor/rtl/event_generator/aer_pixel.sv" Line 1. Module aer_pixel(PIXEL_X=1,PIXEL_Y=14) doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "D:/myWorkspace/MOKArian/github/event_stream_processor/rtl/event_generator/aer_pixel.sv" Line 1. Module aer_pixel(PIXEL_X=1,PIXEL_Y=15) doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "D:/myWorkspace/MOKArian/github/event_stream_processor/rtl/event_generator/aer_pixel.sv" Line 1. Module aer_pixel(PIXEL_X=2) doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "D:/myWorkspace/MOKArian/github/event_stream_processor/rtl/event_generator/aer_pixel.sv" Line 1. Module aer_pixel(PIXEL_X=2,PIXEL_Y=1) doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "D:/myWorkspace/MOKArian/github/event_stream_processor/rtl/event_generator/aer_pixel.sv" Line 1. Module aer_pixel(PIXEL_X=2,PIXEL_Y=2) doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "D:/myWorkspace/MOKArian/github/event_stream_processor/rtl/event_generator/aer_pixel.sv" Line 1. Module aer_pixel(PIXEL_X=2,PIXEL_Y=3) doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "D:/myWorkspace/MOKArian/github/event_stream_processor/rtl/event_generator/aer_pixel.sv" Line 1. Module aer_pixel(PIXEL_X=2,PIXEL_Y=4) doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "D:/myWorkspace/MOKArian/github/event_stream_processor/rtl/event_generator/aer_pixel.sv" Line 1. Module aer_pixel(PIXEL_X=2,PIXEL_Y=5) doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "D:/myWorkspace/MOKArian/github/event_stream_processor/rtl/event_generator/aer_pixel.sv" Line 1. Module aer_pixel(PIXEL_X=2,PIXEL_Y=6) doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "D:/myWorkspace/MOKArian/github/event_stream_processor/rtl/event_generator/aer_pixel.sv" Line 1. Module aer_pixel(PIXEL_X=2,PIXEL_Y=7) doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "D:/myWorkspace/MOKArian/github/event_stream_processor/rtl/event_generator/aer_pixel.sv" Line 1. Module aer_pixel(PIXEL_X=2,PIXEL_Y=8) doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "D:/myWorkspace/MOKArian/github/event_stream_processor/rtl/event_generator/aer_pixel.sv" Line 1. Module aer_pixel(PIXEL_X=2,PIXEL_Y=9) doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "D:/myWorkspace/MOKArian/github/event_stream_processor/rtl/event_generator/aer_pixel.sv" Line 1. Module aer_pixel(PIXEL_X=2,PIXEL_Y=10) doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "D:/myWorkspace/MOKArian/github/event_stream_processor/rtl/event_generator/aer_pixel.sv" Line 1. Module aer_pixel(PIXEL_X=2,PIXEL_Y=11) doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "D:/myWorkspace/MOKArian/github/event_stream_processor/rtl/event_generator/aer_pixel.sv" Line 1. Module aer_pixel(PIXEL_X=2,PIXEL_Y=12) doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "D:/myWorkspace/MOKArian/github/event_stream_processor/rtl/event_generator/aer_pixel.sv" Line 1. Module aer_pixel(PIXEL_X=2,PIXEL_Y=13) doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "D:/myWorkspace/MOKArian/github/event_stream_processor/rtl/event_generator/aer_pixel.sv" Line 1. Module aer_pixel(PIXEL_X=2,PIXEL_Y=14) doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "D:/myWorkspace/MOKArian/github/event_stream_processor/rtl/event_generator/aer_pixel.sv" Line 1. Module aer_pixel(PIXEL_X=2,PIXEL_Y=15) doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "D:/myWorkspace/MOKArian/github/event_stream_processor/rtl/event_generator/aer_pixel.sv" Line 1. Module aer_pixel(PIXEL_X=3) doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "D:/myWorkspace/MOKArian/github/event_stream_processor/rtl/event_generator/aer_pixel.sv" Line 1. Module aer_pixel(PIXEL_X=3,PIXEL_Y=1) doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "D:/myWorkspace/MOKArian/github/event_stream_processor/rtl/event_generator/aer_pixel.sv" Line 1. Module aer_pixel(PIXEL_X=3,PIXEL_Y=2) doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "D:/myWorkspace/MOKArian/github/event_stream_processor/rtl/event_generator/aer_pixel.sv" Line 1. Module aer_pixel(PIXEL_X=3,PIXEL_Y=3) doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "D:/myWorkspace/MOKArian/github/event_stream_processor/rtl/event_generator/aer_pixel.sv" Line 1. Module aer_pixel(PIXEL_X=3,PIXEL_Y=4) doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "D:/myWorkspace/MOKArian/github/event_stream_processor/rtl/event_generator/aer_pixel.sv" Line 1. Module aer_pixel(PIXEL_X=3,PIXEL_Y=5) doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "D:/myWorkspace/MOKArian/github/event_stream_processor/rtl/event_generator/aer_pixel.sv" Line 1. Module aer_pixel(PIXEL_X=3,PIXEL_Y=6) doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "D:/myWorkspace/MOKArian/github/event_stream_processor/rtl/event_generator/aer_pixel.sv" Line 1. Module aer_pixel(PIXEL_X=3,PIXEL_Y=7) doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "D:/myWorkspace/MOKArian/github/event_stream_processor/rtl/event_generator/aer_pixel.sv" Line 1. Module aer_pixel(PIXEL_X=3,PIXEL_Y=8) doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "D:/myWorkspace/MOKArian/github/event_stream_processor/rtl/event_generator/aer_pixel.sv" Line 1. Module aer_pixel(PIXEL_X=3,PIXEL_Y=9) doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "D:/myWorkspace/MOKArian/github/event_stream_processor/rtl/event_generator/aer_pixel.sv" Line 1. Module aer_pixel(PIXEL_X=3,PIXEL_Y=10) doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "D:/myWorkspace/MOKArian/github/event_stream_processor/rtl/event_generator/aer_pixel.sv" Line 1. Module aer_pixel(PIXEL_X=3,PIXEL_Y=11) doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "D:/myWorkspace/MOKArian/github/event_stream_processor/rtl/event_generator/aer_pixel.sv" Line 1. Module aer_pixel(PIXEL_X=3,PIXEL_Y=12) doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "D:/myWorkspace/MOKArian/github/event_stream_processor/rtl/event_generator/aer_pixel.sv" Line 1. Module aer_pixel(PIXEL_X=3,PIXEL_Y=13) doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "D:/myWorkspace/MOKArian/github/event_stream_processor/rtl/event_generator/aer_pixel.sv" Line 1. Module aer_pixel(PIXEL_X=3,PIXEL_Y=14) doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "D:/myWorkspace/MOKArian/github/event_stream_processor/rtl/event_generator/aer_pixel.sv" Line 1. Module aer_pixel(PIXEL_X=3,PIXEL_Y=15) doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "D:/myWorkspace/MOKArian/github/event_stream_processor/rtl/event_generator/aer_pixel.sv" Line 1. Module aer_pixel(PIXEL_X=4) doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "D:/myWorkspace/MOKArian/github/event_stream_processor/rtl/event_generator/aer_pixel.sv" Line 1. Module aer_pixel(PIXEL_X=4,PIXEL_Y=1) doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "D:/myWorkspace/MOKArian/github/event_stream_processor/rtl/event_generator/aer_pixel.sv" Line 1. Module aer_pixel(PIXEL_X=4,PIXEL_Y=2) doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "D:/myWorkspace/MOKArian/github/event_stream_processor/rtl/event_generator/aer_pixel.sv" Line 1. Module aer_pixel(PIXEL_X=4,PIXEL_Y=3) doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "D:/myWorkspace/MOKArian/github/event_stream_processor/rtl/event_generator/aer_pixel.sv" Line 1. Module aer_pixel(PIXEL_X=4,PIXEL_Y=4) doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "D:/myWorkspace/MOKArian/github/event_stream_processor/rtl/event_generator/aer_pixel.sv" Line 1. Module aer_pixel(PIXEL_X=4,PIXEL_Y=5) doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "D:/myWorkspace/MOKArian/github/event_stream_processor/rtl/event_generator/aer_pixel.sv" Line 1. Module aer_pixel(PIXEL_X=4,PIXEL_Y=6) doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "D:/myWorkspace/MOKArian/github/event_stream_processor/rtl/event_generator/aer_pixel.sv" Line 1. Module aer_pixel(PIXEL_X=4,PIXEL_Y=7) doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "D:/myWorkspace/MOKArian/github/event_stream_processor/rtl/event_generator/aer_pixel.sv" Line 1. Module aer_pixel(PIXEL_X=4,PIXEL_Y=8) doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "D:/myWorkspace/MOKArian/github/event_stream_processor/rtl/event_generator/aer_pixel.sv" Line 1. Module aer_pixel(PIXEL_X=4,PIXEL_Y=9) doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "D:/myWorkspace/MOKArian/github/event_stream_processor/rtl/event_generator/aer_pixel.sv" Line 1. Module aer_pixel(PIXEL_X=4,PIXEL_Y=10) doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "D:/myWorkspace/MOKArian/github/event_stream_processor/rtl/event_generator/aer_pixel.sv" Line 1. Module aer_pixel(PIXEL_X=4,PIXEL_Y=11) doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "D:/myWorkspace/MOKArian/github/event_stream_processor/rtl/event_generator/aer_pixel.sv" Line 1. Module aer_pixel(PIXEL_X=4,PIXEL_Y=12) doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "D:/myWorkspace/MOKArian/github/event_stream_processor/rtl/event_generator/aer_pixel.sv" Line 1. Module aer_pixel(PIXEL_X=4,PIXEL_Y=13) doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "D:/myWorkspace/MOKArian/github/event_stream_processor/rtl/event_generator/aer_pixel.sv" Line 1. Module aer_pixel(PIXEL_X=4,PIXEL_Y=14) doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "D:/myWorkspace/MOKArian/github/event_stream_processor/rtl/event_generator/aer_pixel.sv" Line 1. Module aer_pixel(PIXEL_X=4,PIXEL_Y=15) doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "D:/myWorkspace/MOKArian/github/event_stream_processor/rtl/event_generator/aer_pixel.sv" Line 1. Module aer_pixel(PIXEL_X=5) doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "D:/myWorkspace/MOKArian/github/event_stream_processor/rtl/event_generator/aer_pixel.sv" Line 1. Module aer_pixel(PIXEL_X=5,PIXEL_Y=1) doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "D:/myWorkspace/MOKArian/github/event_stream_processor/rtl/event_generator/aer_pixel.sv" Line 1. Module aer_pixel(PIXEL_X=5,PIXEL_Y=2) doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "D:/myWorkspace/MOKArian/github/event_stream_processor/rtl/event_generator/aer_pixel.sv" Line 1. Module aer_pixel(PIXEL_X=5,PIXEL_Y=3) doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "D:/myWorkspace/MOKArian/github/event_stream_processor/rtl/event_generator/aer_pixel.sv" Line 1. Module aer_pixel(PIXEL_X=5,PIXEL_Y=4) doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "D:/myWorkspace/MOKArian/github/event_stream_processor/rtl/event_generator/aer_pixel.sv" Line 1. Module aer_pixel(PIXEL_X=5,PIXEL_Y=5) doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "D:/myWorkspace/MOKArian/github/event_stream_processor/rtl/event_generator/aer_pixel.sv" Line 1. Module aer_pixel(PIXEL_X=5,PIXEL_Y=6) doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "D:/myWorkspace/MOKArian/github/event_stream_processor/rtl/event_generator/aer_pixel.sv" Line 1. Module aer_pixel(PIXEL_X=5,PIXEL_Y=7) doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "D:/myWorkspace/MOKArian/github/event_stream_processor/rtl/event_generator/aer_pixel.sv" Line 1. Module aer_pixel(PIXEL_X=5,PIXEL_Y=8) doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "D:/myWorkspace/MOKArian/github/event_stream_processor/rtl/event_generator/aer_pixel.sv" Line 1. Module aer_pixel(PIXEL_X=5,PIXEL_Y=9) doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "D:/myWorkspace/MOKArian/github/event_stream_processor/rtl/event_generator/aer_pixel.sv" Line 1. Module aer_pixel(PIXEL_X=5,PIXEL_Y=10) doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "D:/myWorkspace/MOKArian/github/event_stream_processor/rtl/event_generator/aer_pixel.sv" Line 1. Module aer_pixel(PIXEL_X=5,PIXEL_Y=11) doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "D:/myWorkspace/MOKArian/github/event_stream_processor/rtl/event_generator/aer_pixel.sv" Line 1. Module aer_pixel(PIXEL_X=5,PIXEL_Y=12) doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "D:/myWorkspace/MOKArian/github/event_stream_processor/rtl/event_generator/aer_pixel.sv" Line 1. Module aer_pixel(PIXEL_X=5,PIXEL_Y=13) doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "D:/myWorkspace/MOKArian/github/event_stream_processor/rtl/event_generator/aer_pixel.sv" Line 1. Module aer_pixel(PIXEL_X=5,PIXEL_Y=14) doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "D:/myWorkspace/MOKArian/github/event_stream_processor/rtl/event_generator/aer_pixel.sv" Line 1. Module aer_pixel(PIXEL_X=5,PIXEL_Y=15) doesn't have a timescale but at least one module in design has a timescale.
+INFO: [Common 17-14] Message 'XSIM 43-4099' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.stimulus_generator_default
+Compiling module xil_defaultlib.aer_pixel
+Compiling module xil_defaultlib.aer_pixel(PIXEL_Y=1)
+Compiling module xil_defaultlib.aer_pixel(PIXEL_Y=2)
+Compiling module xil_defaultlib.aer_pixel(PIXEL_Y=3)
+Compiling module xil_defaultlib.aer_pixel(PIXEL_Y=4)
+Compiling module xil_defaultlib.aer_pixel(PIXEL_Y=5)
+Compiling module xil_defaultlib.aer_pixel(PIXEL_Y=6)
+Compiling module xil_defaultlib.aer_pixel(PIXEL_Y=7)
+Compiling module xil_defaultlib.aer_pixel(PIXEL_Y=8)
+Compiling module xil_defaultlib.aer_pixel(PIXEL_Y=9)
+Compiling module xil_defaultlib.aer_pixel(PIXEL_Y=10)
+Compiling module xil_defaultlib.aer_pixel(PIXEL_Y=11)
+Compiling module xil_defaultlib.aer_pixel(PIXEL_Y=12)
+Compiling module xil_defaultlib.aer_pixel(PIXEL_Y=13)
+Compiling module xil_defaultlib.aer_pixel(PIXEL_Y=14)
+Compiling module xil_defaultlib.aer_pixel(PIXEL_Y=15)
+Compiling module xil_defaultlib.aer_pixel(PIXEL_X=1)
+Compiling module xil_defaultlib.aer_pixel(PIXEL_X=1,PIXEL_Y=1)
+Compiling module xil_defaultlib.aer_pixel(PIXEL_X=1,PIXEL_Y=2)
+Compiling module xil_defaultlib.aer_pixel(PIXEL_X=1,PIXEL_Y=3)
+Compiling module xil_defaultlib.aer_pixel(PIXEL_X=1,PIXEL_Y=4)
+Compiling module xil_defaultlib.aer_pixel(PIXEL_X=1,PIXEL_Y=5)
+Compiling module xil_defaultlib.aer_pixel(PIXEL_X=1,PIXEL_Y=6)
+Compiling module xil_defaultlib.aer_pixel(PIXEL_X=1,PIXEL_Y=7)
+Compiling module xil_defaultlib.aer_pixel(PIXEL_X=1,PIXEL_Y=8)
+Compiling module xil_defaultlib.aer_pixel(PIXEL_X=1,PIXEL_Y=9)
+Compiling module xil_defaultlib.aer_pixel(PIXEL_X=1,PIXEL_Y=10)
+Compiling module xil_defaultlib.aer_pixel(PIXEL_X=1,PIXEL_Y=11)
+Compiling module xil_defaultlib.aer_pixel(PIXEL_X=1,PIXEL_Y=12)
+Compiling module xil_defaultlib.aer_pixel(PIXEL_X=1,PIXEL_Y=13)
+Compiling module xil_defaultlib.aer_pixel(PIXEL_X=1,PIXEL_Y=14)
+Compiling module xil_defaultlib.aer_pixel(PIXEL_X=1,PIXEL_Y=15)
+Compiling module xil_defaultlib.aer_pixel(PIXEL_X=2)
+Compiling module xil_defaultlib.aer_pixel(PIXEL_X=2,PIXEL_Y=1)
+Compiling module xil_defaultlib.aer_pixel(PIXEL_X=2,PIXEL_Y=2)
+Compiling module xil_defaultlib.aer_pixel(PIXEL_X=2,PIXEL_Y=3)
+Compiling module xil_defaultlib.aer_pixel(PIXEL_X=2,PIXEL_Y=4)
+Compiling module xil_defaultlib.aer_pixel(PIXEL_X=2,PIXEL_Y=5)
+Compiling module xil_defaultlib.aer_pixel(PIXEL_X=2,PIXEL_Y=6)
+Compiling module xil_defaultlib.aer_pixel(PIXEL_X=2,PIXEL_Y=7)
+Compiling module xil_defaultlib.aer_pixel(PIXEL_X=2,PIXEL_Y=8)
+Compiling module xil_defaultlib.aer_pixel(PIXEL_X=2,PIXEL_Y=9)
+Compiling module xil_defaultlib.aer_pixel(PIXEL_X=2,PIXEL_Y=10)
+Compiling module xil_defaultlib.aer_pixel(PIXEL_X=2,PIXEL_Y=11)
+Compiling module xil_defaultlib.aer_pixel(PIXEL_X=2,PIXEL_Y=12)
+Compiling module xil_defaultlib.aer_pixel(PIXEL_X=2,PIXEL_Y=13)
+Compiling module xil_defaultlib.aer_pixel(PIXEL_X=2,PIXEL_Y=14)
+Compiling module xil_defaultlib.aer_pixel(PIXEL_X=2,PIXEL_Y=15)
+Compiling module xil_defaultlib.aer_pixel(PIXEL_X=3)
+Compiling module xil_defaultlib.aer_pixel(PIXEL_X=3,PIXEL_Y=1)
+Compiling module xil_defaultlib.aer_pixel(PIXEL_X=3,PIXEL_Y=2)
+Compiling module xil_defaultlib.aer_pixel(PIXEL_X=3,PIXEL_Y=3)
+Compiling module xil_defaultlib.aer_pixel(PIXEL_X=3,PIXEL_Y=4)
+Compiling module xil_defaultlib.aer_pixel(PIXEL_X=3,PIXEL_Y=5)
+Compiling module xil_defaultlib.aer_pixel(PIXEL_X=3,PIXEL_Y=6)
+Compiling module xil_defaultlib.aer_pixel(PIXEL_X=3,PIXEL_Y=7)
+Compiling module xil_defaultlib.aer_pixel(PIXEL_X=3,PIXEL_Y=8)
+Compiling module xil_defaultlib.aer_pixel(PIXEL_X=3,PIXEL_Y=9)
+Compiling module xil_defaultlib.aer_pixel(PIXEL_X=3,PIXEL_Y=10)
+Compiling module xil_defaultlib.aer_pixel(PIXEL_X=3,PIXEL_Y=11)
+Compiling module xil_defaultlib.aer_pixel(PIXEL_X=3,PIXEL_Y=12)
+Compiling module xil_defaultlib.aer_pixel(PIXEL_X=3,PIXEL_Y=13)
+Compiling module xil_defaultlib.aer_pixel(PIXEL_X=3,PIXEL_Y=14)
+Compiling module xil_defaultlib.aer_pixel(PIXEL_X=3,PIXEL_Y=15)
+Compiling module xil_defaultlib.aer_pixel(PIXEL_X=4)
+Compiling module xil_defaultlib.aer_pixel(PIXEL_X=4,PIXEL_Y=1)
+Compiling module xil_defaultlib.aer_pixel(PIXEL_X=4,PIXEL_Y=2)
+Compiling module xil_defaultlib.aer_pixel(PIXEL_X=4,PIXEL_Y=3)
+Compiling module xil_defaultlib.aer_pixel(PIXEL_X=4,PIXEL_Y=4)
+Compiling module xil_defaultlib.aer_pixel(PIXEL_X=4,PIXEL_Y=5)
+Compiling module xil_defaultlib.aer_pixel(PIXEL_X=4,PIXEL_Y=6)
+Compiling module xil_defaultlib.aer_pixel(PIXEL_X=4,PIXEL_Y=7)
+Compiling module xil_defaultlib.aer_pixel(PIXEL_X=4,PIXEL_Y=8)
+Compiling module xil_defaultlib.aer_pixel(PIXEL_X=4,PIXEL_Y=9)
+Compiling module xil_defaultlib.aer_pixel(PIXEL_X=4,PIXEL_Y=10)
+Compiling module xil_defaultlib.aer_pixel(PIXEL_X=4,PIXEL_Y=11)
+Compiling module xil_defaultlib.aer_pixel(PIXEL_X=4,PIXEL_Y=12)
+Compiling module xil_defaultlib.aer_pixel(PIXEL_X=4,PIXEL_Y=13)
+Compiling module xil_defaultlib.aer_pixel(PIXEL_X=4,PIXEL_Y=14)
+Compiling module xil_defaultlib.aer_pixel(PIXEL_X=4,PIXEL_Y=15)
+Compiling module xil_defaultlib.aer_pixel(PIXEL_X=5)
+Compiling module xil_defaultlib.aer_pixel(PIXEL_X=5,PIXEL_Y=1)
+Compiling module xil_defaultlib.aer_pixel(PIXEL_X=5,PIXEL_Y=2)
+Compiling module xil_defaultlib.aer_pixel(PIXEL_X=5,PIXEL_Y=3)
+Compiling module xil_defaultlib.aer_pixel(PIXEL_X=5,PIXEL_Y=4)
+Compiling module xil_defaultlib.aer_pixel(PIXEL_X=5,PIXEL_Y=5)
+Compiling module xil_defaultlib.aer_pixel(PIXEL_X=5,PIXEL_Y=6)
+Compiling module xil_defaultlib.aer_pixel(PIXEL_X=5,PIXEL_Y=7)
+Compiling module xil_defaultlib.aer_pixel(PIXEL_X=5,PIXEL_Y=8)
+Compiling module xil_defaultlib.aer_pixel(PIXEL_X=5,PIXEL_Y=9)
+Compiling module xil_defaultlib.aer_pixel(PIXEL_X=5,PIXEL_Y=10)
+Compiling module xil_defaultlib.aer_pixel(PIXEL_X=5,PIXEL_Y=11)
+Compiling module xil_defaultlib.aer_pixel(PIXEL_X=5,PIXEL_Y=12)
+Compiling module xil_defaultlib.aer_pixel(PIXEL_X=5,PIXEL_Y=13)
+Compiling module xil_defaultlib.aer_pixel(PIXEL_X=5,PIXEL_Y=14)
+Compiling module xil_defaultlib.aer_pixel(PIXEL_X=5,PIXEL_Y=15)
+Compiling module xil_defaultlib.aer_pixel(PIXEL_X=6)
+Compiling module xil_defaultlib.aer_pixel(PIXEL_X=6,PIXEL_Y=1)
+Compiling module xil_defaultlib.aer_pixel(PIXEL_X=6,PIXEL_Y=2)
+Compiling module xil_defaultlib.aer_pixel(PIXEL_X=6,PIXEL_Y=3)
+Compiling module xil_defaultlib.aer_pixel(PIXEL_X=6,PIXEL_Y=4)
+Compiling module xil_defaultlib.aer_pixel(PIXEL_X=6,PIXEL_Y=5)
+Compiling module xil_defaultlib.aer_pixel(PIXEL_X=6,PIXEL_Y=6)
+Compiling module xil_defaultlib.aer_pixel(PIXEL_X=6,PIXEL_Y=7)
+Compiling module xil_defaultlib.aer_pixel(PIXEL_X=6,PIXEL_Y=8)
+Compiling module xil_defaultlib.aer_pixel(PIXEL_X=6,PIXEL_Y=9)
+Compiling module xil_defaultlib.aer_pixel(PIXEL_X=6,PIXEL_Y=10)
+Compiling module xil_defaultlib.aer_pixel(PIXEL_X=6,PIXEL_Y=11)
+Compiling module xil_defaultlib.aer_pixel(PIXEL_X=6,PIXEL_Y=12)
+Compiling module xil_defaultlib.aer_pixel(PIXEL_X=6,PIXEL_Y=13)
+Compiling module xil_defaultlib.aer_pixel(PIXEL_X=6,PIXEL_Y=14)
+Compiling module xil_defaultlib.aer_pixel(PIXEL_X=6,PIXEL_Y=15)
+Compiling module xil_defaultlib.aer_pixel(PIXEL_X=7)
+Compiling module xil_defaultlib.aer_pixel(PIXEL_X=7,PIXEL_Y=1)
+Compiling module xil_defaultlib.aer_pixel(PIXEL_X=7,PIXEL_Y=2)
+Compiling module xil_defaultlib.aer_pixel(PIXEL_X=7,PIXEL_Y=3)
+Compiling module xil_defaultlib.aer_pixel(PIXEL_X=7,PIXEL_Y=4)
+Compiling module xil_defaultlib.aer_pixel(PIXEL_X=7,PIXEL_Y=5)
+Compiling module xil_defaultlib.aer_pixel(PIXEL_X=7,PIXEL_Y=6)
+Compiling module xil_defaultlib.aer_pixel(PIXEL_X=7,PIXEL_Y=7)
+Compiling module xil_defaultlib.aer_pixel(PIXEL_X=7,PIXEL_Y=8)
+Compiling module xil_defaultlib.aer_pixel(PIXEL_X=7,PIXEL_Y=9)
+Compiling module xil_defaultlib.aer_pixel(PIXEL_X=7,PIXEL_Y=10)
+Compiling module xil_defaultlib.aer_pixel(PIXEL_X=7,PIXEL_Y=11)
+Compiling module xil_defaultlib.aer_pixel(PIXEL_X=7,PIXEL_Y=12)
+Compiling module xil_defaultlib.aer_pixel(PIXEL_X=7,PIXEL_Y=13)
+Compiling module xil_defaultlib.aer_pixel(PIXEL_X=7,PIXEL_Y=14)
+Compiling module xil_defaultlib.aer_pixel(PIXEL_X=7,PIXEL_Y=15)
+Compiling module xil_defaultlib.aer_pixel(PIXEL_X=8)
+Compiling module xil_defaultlib.aer_pixel(PIXEL_X=8,PIXEL_Y=1)
+Compiling module xil_defaultlib.aer_pixel(PIXEL_X=8,PIXEL_Y=2)
+Compiling module xil_defaultlib.aer_pixel(PIXEL_X=8,PIXEL_Y=3)
+Compiling module xil_defaultlib.aer_pixel(PIXEL_X=8,PIXEL_Y=4)
+Compiling module xil_defaultlib.aer_pixel(PIXEL_X=8,PIXEL_Y=5)
+Compiling module xil_defaultlib.aer_pixel(PIXEL_X=8,PIXEL_Y=6)
+Compiling module xil_defaultlib.aer_pixel(PIXEL_X=8,PIXEL_Y=7)
+Compiling module xil_defaultlib.aer_pixel(PIXEL_X=8,PIXEL_Y=8)
+Compiling module xil_defaultlib.aer_pixel(PIXEL_X=8,PIXEL_Y=9)
+Compiling module xil_defaultlib.aer_pixel(PIXEL_X=8,PIXEL_Y=10)
+Compiling module xil_defaultlib.aer_pixel(PIXEL_X=8,PIXEL_Y=11)
+Compiling module xil_defaultlib.aer_pixel(PIXEL_X=8,PIXEL_Y=12)
+Compiling module xil_defaultlib.aer_pixel(PIXEL_X=8,PIXEL_Y=13)
+Compiling module xil_defaultlib.aer_pixel(PIXEL_X=8,PIXEL_Y=14)
+Compiling module xil_defaultlib.aer_pixel(PIXEL_X=8,PIXEL_Y=15)
+Compiling module xil_defaultlib.aer_pixel(PIXEL_X=9)
+Compiling module xil_defaultlib.aer_pixel(PIXEL_X=9,PIXEL_Y=1)
+Compiling module xil_defaultlib.aer_pixel(PIXEL_X=9,PIXEL_Y=2)
+Compiling module xil_defaultlib.aer_pixel(PIXEL_X=9,PIXEL_Y=3)
+Compiling module xil_defaultlib.aer_pixel(PIXEL_X=9,PIXEL_Y=4)
+Compiling module xil_defaultlib.aer_pixel(PIXEL_X=9,PIXEL_Y=5)
+Compiling module xil_defaultlib.aer_pixel(PIXEL_X=9,PIXEL_Y=6)
+Compiling module xil_defaultlib.aer_pixel(PIXEL_X=9,PIXEL_Y=7)
+Compiling module xil_defaultlib.aer_pixel(PIXEL_X=9,PIXEL_Y=8)
+Compiling module xil_defaultlib.aer_pixel(PIXEL_X=9,PIXEL_Y=9)
+Compiling module xil_defaultlib.aer_pixel(PIXEL_X=9,PIXEL_Y=10)
+Compiling module xil_defaultlib.aer_pixel(PIXEL_X=9,PIXEL_Y=11)
+Compiling module xil_defaultlib.aer_pixel(PIXEL_X=9,PIXEL_Y=12)
+Compiling module xil_defaultlib.aer_pixel(PIXEL_X=9,PIXEL_Y=13)
+Compiling module xil_defaultlib.aer_pixel(PIXEL_X=9,PIXEL_Y=14)
+Compiling module xil_defaultlib.aer_pixel(PIXEL_X=9,PIXEL_Y=15)
+Compiling module xil_defaultlib.aer_pixel(PIXEL_X=10)
+Compiling module xil_defaultlib.aer_pixel(PIXEL_X=10,PIXEL_Y=1)
+Compiling module xil_defaultlib.aer_pixel(PIXEL_X=10,PIXEL_Y=2)
+Compiling module xil_defaultlib.aer_pixel(PIXEL_X=10,PIXEL_Y=3)
+Compiling module xil_defaultlib.aer_pixel(PIXEL_X=10,PIXEL_Y=4)
+Compiling module xil_defaultlib.aer_pixel(PIXEL_X=10,PIXEL_Y=5)
+Compiling module xil_defaultlib.aer_pixel(PIXEL_X=10,PIXEL_Y=6)
+Compiling module xil_defaultlib.aer_pixel(PIXEL_X=10,PIXEL_Y=7)
+Compiling module xil_defaultlib.aer_pixel(PIXEL_X=10,PIXEL_Y=8)
+Compiling module xil_defaultlib.aer_pixel(PIXEL_X=10,PIXEL_Y=9)
+Compiling module xil_defaultlib.aer_pixel(PIXEL_X=10,PIXEL_Y=10)
+Compiling module xil_defaultlib.aer_pixel(PIXEL_X=10,PIXEL_Y=11)
+Compiling module xil_defaultlib.aer_pixel(PIXEL_X=10,PIXEL_Y=12)
+Compiling module xil_defaultlib.aer_pixel(PIXEL_X=10,PIXEL_Y=13)
+Compiling module xil_defaultlib.aer_pixel(PIXEL_X=10,PIXEL_Y=14)
+Compiling module xil_defaultlib.aer_pixel(PIXEL_X=10,PIXEL_Y=15)
+Compiling module xil_defaultlib.aer_pixel(PIXEL_X=11)
+Compiling module xil_defaultlib.aer_pixel(PIXEL_X=11,PIXEL_Y=1)
+Compiling module xil_defaultlib.aer_pixel(PIXEL_X=11,PIXEL_Y=2)
+Compiling module xil_defaultlib.aer_pixel(PIXEL_X=11,PIXEL_Y=3)
+Compiling module xil_defaultlib.aer_pixel(PIXEL_X=11,PIXEL_Y=4)
+Compiling module xil_defaultlib.aer_pixel(PIXEL_X=11,PIXEL_Y=5)
+Compiling module xil_defaultlib.aer_pixel(PIXEL_X=11,PIXEL_Y=6)
+Compiling module xil_defaultlib.aer_pixel(PIXEL_X=11,PIXEL_Y=7)
+Compiling module xil_defaultlib.aer_pixel(PIXEL_X=11,PIXEL_Y=8)
+Compiling module xil_defaultlib.aer_pixel(PIXEL_X=11,PIXEL_Y=9)
+Compiling module xil_defaultlib.aer_pixel(PIXEL_X=11,PIXEL_Y=10)
+Compiling module xil_defaultlib.aer_pixel(PIXEL_X=11,PIXEL_Y=11)
+Compiling module xil_defaultlib.aer_pixel(PIXEL_X=11,PIXEL_Y=12)
+Compiling module xil_defaultlib.aer_pixel(PIXEL_X=11,PIXEL_Y=13)
+Compiling module xil_defaultlib.aer_pixel(PIXEL_X=11,PIXEL_Y=14)
+Compiling module xil_defaultlib.aer_pixel(PIXEL_X=11,PIXEL_Y=15)
+Compiling module xil_defaultlib.aer_pixel(PIXEL_X=12)
+Compiling module xil_defaultlib.aer_pixel(PIXEL_X=12,PIXEL_Y=1)
+Compiling module xil_defaultlib.aer_pixel(PIXEL_X=12,PIXEL_Y=2)
+Compiling module xil_defaultlib.aer_pixel(PIXEL_X=12,PIXEL_Y=3)
+Compiling module xil_defaultlib.aer_pixel(PIXEL_X=12,PIXEL_Y=4)
+Compiling module xil_defaultlib.aer_pixel(PIXEL_X=12,PIXEL_Y=5)
+Compiling module xil_defaultlib.aer_pixel(PIXEL_X=12,PIXEL_Y=6)
+Compiling module xil_defaultlib.aer_pixel(PIXEL_X=12,PIXEL_Y=7)
+Compiling module xil_defaultlib.aer_pixel(PIXEL_X=12,PIXEL_Y=8)
+Compiling module xil_defaultlib.aer_pixel(PIXEL_X=12,PIXEL_Y=9)
+Compiling module xil_defaultlib.aer_pixel(PIXEL_X=12,PIXEL_Y=10)
+Compiling module xil_defaultlib.aer_pixel(PIXEL_X=12,PIXEL_Y=11)
+Compiling module xil_defaultlib.aer_pixel(PIXEL_X=12,PIXEL_Y=12)
+Compiling module xil_defaultlib.aer_pixel(PIXEL_X=12,PIXEL_Y=13)
+Compiling module xil_defaultlib.aer_pixel(PIXEL_X=12,PIXEL_Y=14)
+Compiling module xil_defaultlib.aer_pixel(PIXEL_X=12,PIXEL_Y=15)
+Compiling module xil_defaultlib.aer_pixel(PIXEL_X=13)
+Compiling module xil_defaultlib.aer_pixel(PIXEL_X=13,PIXEL_Y=1)
+Compiling module xil_defaultlib.aer_pixel(PIXEL_X=13,PIXEL_Y=2)
+Compiling module xil_defaultlib.aer_pixel(PIXEL_X=13,PIXEL_Y=3)
+Compiling module xil_defaultlib.aer_pixel(PIXEL_X=13,PIXEL_Y=4)
+Compiling module xil_defaultlib.aer_pixel(PIXEL_X=13,PIXEL_Y=5)
+Compiling module xil_defaultlib.aer_pixel(PIXEL_X=13,PIXEL_Y=6)
+Compiling module xil_defaultlib.aer_pixel(PIXEL_X=13,PIXEL_Y=7)
+Compiling module xil_defaultlib.aer_pixel(PIXEL_X=13,PIXEL_Y=8)
+Compiling module xil_defaultlib.aer_pixel(PIXEL_X=13,PIXEL_Y=9)
+Compiling module xil_defaultlib.aer_pixel(PIXEL_X=13,PIXEL_Y=10)
+Compiling module xil_defaultlib.aer_pixel(PIXEL_X=13,PIXEL_Y=11)
+Compiling module xil_defaultlib.aer_pixel(PIXEL_X=13,PIXEL_Y=12)
+Compiling module xil_defaultlib.aer_pixel(PIXEL_X=13,PIXEL_Y=13)
+Compiling module xil_defaultlib.aer_pixel(PIXEL_X=13,PIXEL_Y=14)
+Compiling module xil_defaultlib.aer_pixel(PIXEL_X=13,PIXEL_Y=15)
+Compiling module xil_defaultlib.aer_pixel(PIXEL_X=14)
+Compiling module xil_defaultlib.aer_pixel(PIXEL_X=14,PIXEL_Y=1)
+Compiling module xil_defaultlib.aer_pixel(PIXEL_X=14,PIXEL_Y=2)
+Compiling module xil_defaultlib.aer_pixel(PIXEL_X=14,PIXEL_Y=3)
+Compiling module xil_defaultlib.aer_pixel(PIXEL_X=14,PIXEL_Y=4)
+Compiling module xil_defaultlib.aer_pixel(PIXEL_X=14,PIXEL_Y=5)
+Compiling module xil_defaultlib.aer_pixel(PIXEL_X=14,PIXEL_Y=6)
+Compiling module xil_defaultlib.aer_pixel(PIXEL_X=14,PIXEL_Y=7)
+Compiling module xil_defaultlib.aer_pixel(PIXEL_X=14,PIXEL_Y=8)
+Compiling module xil_defaultlib.aer_pixel(PIXEL_X=14,PIXEL_Y=9)
+Compiling module xil_defaultlib.aer_pixel(PIXEL_X=14,PIXEL_Y=10)
+Compiling module xil_defaultlib.aer_pixel(PIXEL_X=14,PIXEL_Y=11)
+Compiling module xil_defaultlib.aer_pixel(PIXEL_X=14,PIXEL_Y=12)
+Compiling module xil_defaultlib.aer_pixel(PIXEL_X=14,PIXEL_Y=13)
+Compiling module xil_defaultlib.aer_pixel(PIXEL_X=14,PIXEL_Y=14)
+Compiling module xil_defaultlib.aer_pixel(PIXEL_X=14,PIXEL_Y=15)
+Compiling module xil_defaultlib.aer_pixel(PIXEL_X=15)
+Compiling module xil_defaultlib.aer_pixel(PIXEL_X=15,PIXEL_Y=1)
+Compiling module xil_defaultlib.aer_pixel(PIXEL_X=15,PIXEL_Y=2)
+Compiling module xil_defaultlib.aer_pixel(PIXEL_X=15,PIXEL_Y=3)
+Compiling module xil_defaultlib.aer_pixel(PIXEL_X=15,PIXEL_Y=4)
+Compiling module xil_defaultlib.aer_pixel(PIXEL_X=15,PIXEL_Y=5)
+Compiling module xil_defaultlib.aer_pixel(PIXEL_X=15,PIXEL_Y=6)
+Compiling module xil_defaultlib.aer_pixel(PIXEL_X=15,PIXEL_Y=7)
+Compiling module xil_defaultlib.aer_pixel(PIXEL_X=15,PIXEL_Y=8)
+Compiling module xil_defaultlib.aer_pixel(PIXEL_X=15,PIXEL_Y=9)
+Compiling module xil_defaultlib.aer_pixel(PIXEL_X=15,PIXEL_Y=10)
+Compiling module xil_defaultlib.aer_pixel(PIXEL_X=15,PIXEL_Y=11)
+Compiling module xil_defaultlib.aer_pixel(PIXEL_X=15,PIXEL_Y=12)
+Compiling module xil_defaultlib.aer_pixel(PIXEL_X=15,PIXEL_Y=13)
+Compiling module xil_defaultlib.aer_pixel(PIXEL_X=15,PIXEL_Y=14)
+Compiling module xil_defaultlib.aer_pixel(PIXEL_X=15,PIXEL_Y=15)
+Compiling module xil_defaultlib.rr_arbiter(REQ_COUNT=256)
+Compiling module xil_defaultlib.aer_arbiter_default
+Compiling module xil_defaultlib.aer_pixel_array_default
+Compiling module xil_defaultlib.event_generator_top
+Compiling module xil_defaultlib.async_fifo_default
+Compiling module xil_defaultlib.event_cdc_bridge
+Compiling module xil_defaultlib.timestamp_counter(INPUT_CLK_FREQ...
+Compiling module xil_defaultlib.spatiotemporal_filter_default
+Compiling module xil_defaultlib.filter_subsystem(INPUT_CLK_FREQ_...
+Compiling module xil_defaultlib.event_pipeline(INPUT_CLK_FREQ_HZ...
+Compiling module xil_defaultlib.tb_pipeline
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot tb_pipeline_behav
+run_program: Time (s): cpu = 00:00:00 ; elapsed = 00:00:11 . Memory (MB): peak = 383.891 ; gain = 0.000
+INFO: [USF-XSim-69] 'elaborate' step finished in '11' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'D:/myWorkspace/MOKArian/github/event_stream_processor/scripts/sim/pipeline_test/pipeline_test/pipeline_test.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "tb_pipeline_behav -key {Behavioral:sim_1:Functional:tb_pipeline} -tclbatch {tb_pipeline.tcl} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Vivado Simulator 2019.1
+Time resolution is 1 ps
+source tb_pipeline.tcl
+## current_wave_config
+$finish called at time : 640 ns : File "D:/myWorkspace/MOKArian/github/event_stream_processor/tb/integration/tb_pipeline.sv" Line 175
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'tb_pipeline_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+launch_simulation: Time (s): cpu = 00:00:00 ; elapsed = 00:00:16 . Memory (MB): peak = 388.938 ; gain = 9.039
+# run 3us
+INFO: [Common 17-206] Exiting Vivado at Sat Oct  3 10:23:09 2026...

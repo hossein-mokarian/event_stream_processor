@@ -1,0 +1,21 @@
+# compile verilog/system verilog design source files
+sv xil_defaultlib  \
+"../../../../../../../../rtl/event_generator/aer_arbiter.sv" \
+"../../../../../../../../rtl/event_generator/aer_pixel.sv" \
+"../../../../../../../../rtl/event_generator/aer_pixel_array.sv" \
+"../../../../../../../../rtl/cdc/async_fifo.sv" \
+"../../../../../../../../rtl/cdc/event_cdc_bridge.sv" \
+"../../../../../../../../rtl/event_generator/event_generator_top.sv" \
+"../../../../../../../../rtl/top/event_pipeline.sv" \
+"../../../../../../../../rtl/filter/filter_subsystem.sv" \
+"../../../../../../../../rtl/event_generator/rr_arbiter.sv" \
+"../../../../../../../../rtl/filter/spatiotemporal_filter.sv" \
+"../../../../../../../../rtl/event_generator/stimulus_generator.sv" \
+"../../../../../../../../rtl/timestamp/timestamp_counter.sv" \
+"../../../../../../../../tb/integration/tb_pipeline.sv" \
+
+# compile glbl module
+verilog xil_defaultlib "glbl.v"
+
+# Do not sort compile order
+nosort

@@ -13,6 +13,7 @@ module filter_subsystem #(
     input logic [ADDR_WIDTH - 1 : 0] ev_addr_in, // {x, y}
     input logic ev_pol_in,
     // input logic [TIMESTAMP_WIDTH - 1 : 0] timestamp_in,
+    output logic ev_ack_out,
 
     //--- Filtered events ---
     output logic ev_valid_out,
@@ -41,12 +42,12 @@ module filter_subsystem #(
     );
 
 
-    filter_v2 #(
+    spatiotemporal_filter #(
         .HISTORY_DEPTH(HISTORY_DEPTH),
         .ADDR_WIDTH(ADDR_WIDTH),
         .TIMESTAMP_WIDTH(TIMESTAMP_WIDTH),
         .FILTER_TIME_US(FILTER_TIME_US)
-    ) filter (
+    ) filter_ver1 (
         //--- General ---
         .clk(clk),
         .rst_n(rst_n),
@@ -56,6 +57,7 @@ module filter_subsystem #(
         .ev_addr_in(ev_addr_in),
         .ev_pol_in(ev_pol_in),
         .timestamp_in(timestamp),
+        .ev_ack_out(ev_ack_out),
 
         //--- Filtered events ---
         .ev_valid_out(ev_valid_out),
@@ -67,5 +69,33 @@ module filter_subsystem #(
         .ev_pass_out(ev_pass_out),
         .ev_drop_out(ev_drop_out)
     );
+
+
+    // filter_v2 #(
+    //     .HISTORY_DEPTH(HISTORY_DEPTH),
+    //     .ADDR_WIDTH(ADDR_WIDTH),
+    //     .TIMESTAMP_WIDTH(TIMESTAMP_WIDTH),
+    //     .FILTER_TIME_US(FILTER_TIME_US)
+    // ) filter_ver2 (
+    //     //--- General ---
+    //     .clk(clk),
+    //     .rst_n(rst_n),
+
+    //     //--- Events ---
+    //     .ev_valid_in(ev_valid_in),
+    //     .ev_addr_in(ev_addr_in),
+    //     .ev_pol_in(ev_pol_in),
+    //     .timestamp_in(timestamp),
+
+    //     //--- Filtered events ---
+    //     .ev_valid_out(ev_valid_out),
+    //     .filtered_ev_addr_out(filtered_ev_addr_out),
+    //     .filtered_ev_pol_out(filtered_ev_pol_out),
+    //     .timestamp_out(timestamp_out),
+
+    //     //--- Status ---
+    //     .ev_pass_out(ev_pass_out),
+    //     .ev_drop_out(ev_drop_out)
+    // );
 
 endmodule
