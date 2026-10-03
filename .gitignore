@@ -1,1 +1,23 @@
 build/\nsim_build/\n*.jou\n*.log\n*.str\n*.xpr\n*.cache/\nxsim.dir/\nmodelsim.ini\n*.vcd\n*.wlf\n
+
+# Waveforms and simulation artifacts
+*.vcd
+*.wdb
+*.fsdb
+*.vpd
+*.vcd.gz
+
+# Vivado project auto-generated directories
+*.sim/
+*.runs/
+*.cache/
+*.hw/
+*.ip_user_files/
+*.jou
+*.log
+*.str
+
+# Temporary / compiled HDL files
+xsim.dir/
+xvlog.pb
+xelab.pb
